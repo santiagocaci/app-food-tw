@@ -18,7 +18,7 @@ export const Navbar = () => {
   console.log(isNavOpen);
 
   return (
-    <div className='max-w-7xl mx-auto flex justify-between items-center p-4'>
+    <div className='max-w-[1640px] mx-auto flex justify-between items-center p-4'>
       <div className='flex items-center'>
         <div onClick={handleToggleNavbar} className='cursor-pointer'>
           <AiOutlineMenu size={30} />
