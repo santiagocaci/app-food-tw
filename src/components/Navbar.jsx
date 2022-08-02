@@ -15,12 +15,10 @@ export const Navbar = () => {
 
   const handleToggleNavbar = () => setIsNavOpen(!isNavOpen);
 
-  console.log(isNavOpen);
-
   return (
     <div className='max-w-[1640px] mx-auto flex justify-between items-center p-4'>
       <div className='flex items-center'>
-        <div onClick={handleToggleNavbar} className='cursor-pointer'>
+        <div onClick={handleToggleNavbar} className='cursor-pointer  lg:hidden'>
           <AiOutlineMenu size={30} />
         </div>
         <h1 className='text-2xl sm:text-2xl lg:text-4xl px-2'>
@@ -46,7 +44,7 @@ export const Navbar = () => {
       </button>
 
       {isNavOpen && (
-        <div className='bg-black/80 fixed w-full h-screen z-10 top-0 left-0 duration-700'></div>
+        <div className='bg-black/80 fixed w-full h-screen z-10 top-0 left-0'></div>
       )}
 
       <div
@@ -61,6 +59,7 @@ export const Navbar = () => {
           size={30}
           className='absolute top-4 right-4 cursor-pointer'
         />
+
         <h2 className='text-2xl p-4'>
           Best <span className='font-bold'>Eats</span>
         </h2>
